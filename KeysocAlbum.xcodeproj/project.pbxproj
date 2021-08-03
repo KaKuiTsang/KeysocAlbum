@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		703078ED037BA82C7CB42ABD /* Pods_KeysocAlbum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2CECF2B039D13A8AB998AB /* Pods_KeysocAlbum.framework */; };
+		8B46CD561DF4BDB6288C05CE /* Pods_KeysocAlbumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B083DD0C01F0902DC1969C5F /* Pods_KeysocAlbumTests.framework */; };
 		A807CAE326B95BB600A9B779 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807CAE226B95BB600A9B779 /* AppDelegate.swift */; };
 		A807CAE526B95BB600A9B779 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807CAE426B95BB600A9B779 /* SceneDelegate.swift */; };
 		A807CAE726B95BB600A9B779 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807CAE626B95BB600A9B779 /* ViewController.swift */; };
@@ -15,6 +17,7 @@
 		A807CAEF26B95BB700A9B779 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A807CAED26B95BB700A9B779 /* LaunchScreen.storyboard */; };
 		A807CAFA26B95BB700A9B779 /* KeysocAlbumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807CAF926B95BB700A9B779 /* KeysocAlbumTests.swift */; };
 		A807CB0526B95BB700A9B779 /* KeysocAlbumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807CB0426B95BB700A9B779 /* KeysocAlbumUITests.swift */; };
+		EF636DC3764D6E2EBC9E0DD2 /* Pods_KeysocAlbum_KeysocAlbumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53616E240D5ACA8D24EC713A /* Pods_KeysocAlbum_KeysocAlbumUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E8A0D5F15BCBA85C1A82A60 /* Pods-KeysocAlbum-KeysocAlbumUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeysocAlbum-KeysocAlbumUITests.release.xcconfig"; path = "Target Support Files/Pods-KeysocAlbum-KeysocAlbumUITests/Pods-KeysocAlbum-KeysocAlbumUITests.release.xcconfig"; sourceTree = "<group>"; };
+		53616E240D5ACA8D24EC713A /* Pods_KeysocAlbum_KeysocAlbumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeysocAlbum_KeysocAlbumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E2CECF2B039D13A8AB998AB /* Pods_KeysocAlbum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeysocAlbum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		784EFD92D7A694B0CB99ECB7 /* Pods-KeysocAlbum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeysocAlbum.debug.xcconfig"; path = "Target Support Files/Pods-KeysocAlbum/Pods-KeysocAlbum.debug.xcconfig"; sourceTree = "<group>"; };
+		97BCD0873DDAD5F83C37FD79 /* Pods-KeysocAlbumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeysocAlbumTests.release.xcconfig"; path = "Target Support Files/Pods-KeysocAlbumTests/Pods-KeysocAlbumTests.release.xcconfig"; sourceTree = "<group>"; };
+		A7A7F07E0DCF0DAE27C94E74 /* Pods-KeysocAlbumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeysocAlbumTests.debug.xcconfig"; path = "Target Support Files/Pods-KeysocAlbumTests/Pods-KeysocAlbumTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A807CADF26B95BB600A9B779 /* KeysocAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeysocAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A807CAE226B95BB600A9B779 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A807CAE426B95BB600A9B779 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +58,9 @@
 		A807CB0026B95BB700A9B779 /* KeysocAlbumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeysocAlbumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A807CB0426B95BB700A9B779 /* KeysocAlbumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysocAlbumUITests.swift; sourceTree = "<group>"; };
 		A807CB0626B95BB700A9B779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B083DD0C01F0902DC1969C5F /* Pods_KeysocAlbumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeysocAlbumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F521094AF5E30716240BC1CA /* Pods-KeysocAlbum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeysocAlbum.release.xcconfig"; path = "Target Support Files/Pods-KeysocAlbum/Pods-KeysocAlbum.release.xcconfig"; sourceTree = "<group>"; };
+		FB94FC29AE53C880D8628977 /* Pods-KeysocAlbum-KeysocAlbumUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeysocAlbum-KeysocAlbumUITests.debug.xcconfig"; path = "Target Support Files/Pods-KeysocAlbum-KeysocAlbumUITests/Pods-KeysocAlbum-KeysocAlbumUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				703078ED037BA82C7CB42ABD /* Pods_KeysocAlbum.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B46CD561DF4BDB6288C05CE /* Pods_KeysocAlbumTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF636DC3764D6E2EBC9E0DD2 /* Pods_KeysocAlbum_KeysocAlbumUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40DFEDB16B2F36A841DBC16C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E2CECF2B039D13A8AB998AB /* Pods_KeysocAlbum.framework */,
+				53616E240D5ACA8D24EC713A /* Pods_KeysocAlbum_KeysocAlbumUITests.framework */,
+				B083DD0C01F0902DC1969C5F /* Pods_KeysocAlbumTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A807CAD626B95BB600A9B779 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +108,8 @@
 				A807CAF826B95BB700A9B779 /* KeysocAlbumTests */,
 				A807CB0326B95BB700A9B779 /* KeysocAlbumUITests */,
 				A807CAE026B95BB600A9B779 /* Products */,
+				B0F457C5A61CE7BEC59EDFC4 /* Pods */,
+				40DFEDB16B2F36A841DBC16C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +155,19 @@
 			path = KeysocAlbumUITests;
 			sourceTree = "<group>";
 		};
+		B0F457C5A61CE7BEC59EDFC4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				784EFD92D7A694B0CB99ECB7 /* Pods-KeysocAlbum.debug.xcconfig */,
+				F521094AF5E30716240BC1CA /* Pods-KeysocAlbum.release.xcconfig */,
+				FB94FC29AE53C880D8628977 /* Pods-KeysocAlbum-KeysocAlbumUITests.debug.xcconfig */,
+				4E8A0D5F15BCBA85C1A82A60 /* Pods-KeysocAlbum-KeysocAlbumUITests.release.xcconfig */,
+				A7A7F07E0DCF0DAE27C94E74 /* Pods-KeysocAlbumTests.debug.xcconfig */,
+				97BCD0873DDAD5F83C37FD79 /* Pods-KeysocAlbumTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A807CB0926B95BB700A9B779 /* Build configuration list for PBXNativeTarget "KeysocAlbum" */;
 			buildPhases = (
+				E022D27FCA49E47E103D44AD /* [CP] Check Pods Manifest.lock */,
 				A807CADB26B95BB600A9B779 /* Sources */,
 				A807CADC26B95BB600A9B779 /* Frameworks */,
 				A807CADD26B95BB600A9B779 /* Resources */,
+				869D728E491E97CF2A96BCDE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A807CB0C26B95BB700A9B779 /* Build configuration list for PBXNativeTarget "KeysocAlbumTests" */;
 			buildPhases = (
+				4E0100F685F95EB7D5245309 /* [CP] Check Pods Manifest.lock */,
 				A807CAF126B95BB700A9B779 /* Sources */,
 				A807CAF226B95BB700A9B779 /* Frameworks */,
 				A807CAF326B95BB700A9B779 /* Resources */,
@@ -170,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A807CB0F26B95BB700A9B779 /* Build configuration list for PBXNativeTarget "KeysocAlbumUITests" */;
 			buildPhases = (
+				561A8BC7C095BFD7F35D1BE3 /* [CP] Check Pods Manifest.lock */,
 				A807CAFC26B95BB700A9B779 /* Sources */,
 				A807CAFD26B95BB700A9B779 /* Frameworks */,
 				A807CAFE26B95BB700A9B779 /* Resources */,
+				640BD2D0E6D0F614B0ED7B94 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,6 +297,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E0100F685F95EB7D5245309 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KeysocAlbumTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		561A8BC7C095BFD7F35D1BE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KeysocAlbum-KeysocAlbumUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		640BD2D0E6D0F614B0ED7B94 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KeysocAlbum-KeysocAlbumUITests/Pods-KeysocAlbum-KeysocAlbumUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KeysocAlbum-KeysocAlbumUITests/Pods-KeysocAlbum-KeysocAlbumUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KeysocAlbum-KeysocAlbumUITests/Pods-KeysocAlbum-KeysocAlbumUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		869D728E491E97CF2A96BCDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KeysocAlbum/Pods-KeysocAlbum-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KeysocAlbum/Pods-KeysocAlbum-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KeysocAlbum/Pods-KeysocAlbum-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E022D27FCA49E47E103D44AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KeysocAlbum-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A807CADB26B95BB600A9B779 /* Sources */ = {
@@ -433,6 +581,7 @@
 		};
 		A807CB0A26B95BB700A9B779 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 784EFD92D7A694B0CB99ECB7 /* Pods-KeysocAlbum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -452,6 +601,7 @@
 		};
 		A807CB0B26B95BB700A9B779 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F521094AF5E30716240BC1CA /* Pods-KeysocAlbum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -471,6 +621,7 @@
 		};
 		A807CB0D26B95BB700A9B779 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7A7F07E0DCF0DAE27C94E74 /* Pods-KeysocAlbumTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +644,7 @@
 		};
 		A807CB0E26B95BB700A9B779 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97BCD0873DDAD5F83C37FD79 /* Pods-KeysocAlbumTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,8 +667,9 @@
 		};
 		A807CB1026B95BB700A9B779 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB94FC29AE53C880D8628977 /* Pods-KeysocAlbum-KeysocAlbumUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X4DTA8J4K7;
 				INFOPLIST_FILE = KeysocAlbumUITests/Info.plist;
@@ -535,8 +688,9 @@
 		};
 		A807CB1126B95BB700A9B779 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E8A0D5F15BCBA85C1A82A60 /* Pods-KeysocAlbum-KeysocAlbumUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X4DTA8J4K7;
 				INFOPLIST_FILE = KeysocAlbumUITests/Info.plist;
