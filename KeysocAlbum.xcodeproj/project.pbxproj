@@ -19,6 +19,8 @@
 		A87427A326B96E3900D06F4D /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87427A226B96E3900D06F4D /* Album.swift */; };
 		A87427A526B9717500D06F4D /* AlbumRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87427A426B9717500D06F4D /* AlbumRepository.swift */; };
 		A87427A726BACED700D06F4D /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87427A626BACED700D06F4D /* AlbumCell.swift */; };
+		A87427A926BD125E00D06F4D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87427A826BD125E00D06F4D /* MainViewController.swift */; };
+		A87427AB26BD12A200D06F4D /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87427AA26BD12A200D06F4D /* BookmarkViewController.swift */; };
 		EF636DC3764D6E2EBC9E0DD2 /* Pods_KeysocAlbum_KeysocAlbumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53616E240D5ACA8D24EC713A /* Pods_KeysocAlbum_KeysocAlbumUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,8 @@
 		A87427A226B96E3900D06F4D /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		A87427A426B9717500D06F4D /* AlbumRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRepository.swift; sourceTree = "<group>"; };
 		A87427A626BACED700D06F4D /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		A87427A826BD125E00D06F4D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A87427AA26BD12A200D06F4D /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
 		B083DD0C01F0902DC1969C5F /* Pods_KeysocAlbumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeysocAlbumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F521094AF5E30716240BC1CA /* Pods-KeysocAlbum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeysocAlbum.release.xcconfig"; path = "Target Support Files/Pods-KeysocAlbum/Pods-KeysocAlbum.release.xcconfig"; sourceTree = "<group>"; };
 		FB94FC29AE53C880D8628977 /* Pods-KeysocAlbum-KeysocAlbumUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeysocAlbum-KeysocAlbumUITests.debug.xcconfig"; path = "Target Support Files/Pods-KeysocAlbum-KeysocAlbumUITests/Pods-KeysocAlbum-KeysocAlbumUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,10 +136,12 @@
 			children = (
 				A807CAE226B95BB600A9B779 /* AppDelegate.swift */,
 				A807CAE426B95BB600A9B779 /* SceneDelegate.swift */,
+				A87427A826BD125E00D06F4D /* MainViewController.swift */,
 				A807CAE626B95BB600A9B779 /* AlbumViewController.swift */,
 				A87427A626BACED700D06F4D /* AlbumCell.swift */,
 				A87427A226B96E3900D06F4D /* Album.swift */,
 				A87427A426B9717500D06F4D /* AlbumRepository.swift */,
+				A87427AA26BD12A200D06F4D /* BookmarkViewController.swift */,
 				A807CAEB26B95BB700A9B779 /* Assets.xcassets */,
 				A807CAED26B95BB700A9B779 /* LaunchScreen.storyboard */,
 				A807CAF026B95BB700A9B779 /* Info.plist */,
@@ -411,9 +417,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A87427A926BD125E00D06F4D /* MainViewController.swift in Sources */,
 				A807CAE726B95BB600A9B779 /* AlbumViewController.swift in Sources */,
 				A807CAE326B95BB600A9B779 /* AppDelegate.swift in Sources */,
 				A807CAE526B95BB600A9B779 /* SceneDelegate.swift in Sources */,
+				A87427AB26BD12A200D06F4D /* BookmarkViewController.swift in Sources */,
 				A87427A526B9717500D06F4D /* AlbumRepository.swift in Sources */,
 				A87427A326B96E3900D06F4D /* Album.swift in Sources */,
 				A87427A726BACED700D06F4D /* AlbumCell.swift in Sources */,
