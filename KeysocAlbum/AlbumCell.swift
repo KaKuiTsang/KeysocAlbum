@@ -26,10 +26,10 @@ class AlbumCell: UICollectionViewCell {
         albumNameLabel.numberOfLines = 1
         albumNameLabel.lineBreakMode = .byTruncatingTail
         albumNameLabel.textColor = UIColor.white
-        albumNameLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        albumNameLabel.font = UIFont.systemFont(ofSize: 19, weight: .semibold)
         
         releaseYearLabel.textColor = UIColor.gray
-        releaseYearLabel.font = UIFont.systemFont(ofSize: 18)
+        releaseYearLabel.font = UIFont.systemFont(ofSize: 17)
         
         explicitImageView.tintColor = UIColor.gray
         explicitImageView.isHidden = true
