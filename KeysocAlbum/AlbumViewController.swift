@@ -32,7 +32,8 @@ class AlbumViewController: UIViewController {
         AlbumRepository.shared.fetchAlbum()
             .subscribe { [weak self] result in
                 switch result {
-                case let .success(album):
+                case var .success(album):
+                    album.sort { $0.releaseDate > $1.releaseDate }
                     self?.applySnapshot(with: album, animatingDifferences: true)
                 case let .failure(error):
                     print("error \(error)")
