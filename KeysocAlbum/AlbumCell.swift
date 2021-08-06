@@ -14,6 +14,7 @@ class AlbumCell: UICollectionViewCell {
     private let albumCoverImageView = UIImageView()
     private let albumNameLabel = UILabel()
     private let releaseYearLabel = UILabel()
+    private let explicitImageView = UIImageView(image: UIImage(systemName: "e.square.fill"))
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,10 +31,14 @@ class AlbumCell: UICollectionViewCell {
         releaseYearLabel.textColor = UIColor.gray
         releaseYearLabel.font = UIFont.systemFont(ofSize: 18)
         
+        explicitImageView.tintColor = UIColor.gray
+        explicitImageView.isHidden = true
+        
         contentView.addSubview(container)
         container.addSubview(albumCoverImageView)
         container.addSubview(albumNameLabel)
         container.addSubview(releaseYearLabel)
+        container.addSubview(explicitImageView)
         
         container.snp.makeConstraints {
             $0.top.leading.trailing.bottom.equalToSuperview().priority(.high)
@@ -46,13 +51,20 @@ class AlbumCell: UICollectionViewCell {
         
         albumNameLabel.snp.makeConstraints {
             $0.top.equalTo(albumCoverImageView.snp.bottom).offset(8)
-            $0.leading.trailing.equalToSuperview()
+            $0.leading.equalToSuperview()
+            $0.trailing.equalTo(explicitImageView.snp.leading).offset(-5)
         }
         
         releaseYearLabel.snp.makeConstraints {
             $0.top.equalTo(albumNameLabel.snp.bottom).offset(2)
             $0.leading.trailing.equalToSuperview()
             $0.bottom.equalToSuperview()
+        }
+        
+        explicitImageView.snp.makeConstraints {
+            $0.width.height.equalTo(20)
+            $0.trailing.lessThanOrEqualToSuperview().offset(0)
+            $0.centerY.equalTo(albumNameLabel.snp.centerY)
         }
     }
     
@@ -67,5 +79,7 @@ class AlbumCell: UICollectionViewCell {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy"
         releaseYearLabel.text = dateFormatter.string(from: album.releaseDate)
+        
+        explicitImageView.isHidden = !album.isExplicit
     }
 }
