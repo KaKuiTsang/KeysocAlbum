@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class AlbumViewController: UIViewController {
+final class AlbumViewController: UIViewController {
     typealias DataSource = UICollectionViewDiffableDataSource<Section, Album>
     
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Album>
@@ -18,35 +18,27 @@ class AlbumViewController: UIViewController {
         case main
     }
     
+    private let viewModel: AlbumViewModel
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: createCollectionViewLayout())
     private lazy var dataSource = createDataSource()
     private let disposeBag = DisposeBag()
-
+    
+    init(viewModel: AlbumViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
         configureNavigationBar()
         configureCollectionView()
         layoutSubviews()
-        
-        AlbumRepository.shared.fetchAlbum()
-            .subscribe { [weak self] result in
-                switch result {
-                case var .success(album):
-                    album.sort { $0.releaseDate > $1.releaseDate }
-                    self?.applySnapshot(with: album, animatingDifferences: true)
-                case let .failure(error):
-                    print("error \(error)")
-                }
-            }
-            .disposed(by: disposeBag)
-        
-        collectionView.rx
-            .itemSelected
-            .subscribe(onNext: { [weak self] indexPath in
-                print("\(indexPath.item)")
-            })
-            .disposed(by: disposeBag)
+        setupRxActions()
     }
     
     private func configureNavigationBar() {
@@ -96,5 +88,34 @@ class AlbumViewController: UIViewController {
         section.interGroupSpacing = 16
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
+    }
+    
+    private func setupRxActions() {
+        viewModel.albumsObervable
+            .withUnretained(self)
+            .subscribe(onNext: { owner, albums in
+                owner.applySnapshot(with: albums, animatingDifferences: true)
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.output
+            .withUnretained(self)
+            .subscribe(onNext: { owner, output in
+                switch output {
+                case let .reloadItems(albums):
+                   var snapshot = owner.dataSource.snapshot()
+                    snapshot.reloadItems(albums)
+                    owner.dataSource.apply(snapshot, animatingDifferences: false)
+                }
+            })
+            .disposed(by: disposeBag)
+
+        collectionView.rx
+            .itemSelected
+            .withUnretained(self)
+            .subscribe(onNext: { owner, indexPath in
+                owner.viewModel.input.accept(.didTap(indexPath.item))
+            })
+            .disposed(by: disposeBag)
     }
 }

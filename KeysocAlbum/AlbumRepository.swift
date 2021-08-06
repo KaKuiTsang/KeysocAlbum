@@ -11,8 +11,6 @@ import RxSwift
 
 class AlbumRepository {
     
-    static let shared = AlbumRepository()
-    
     func fetchAlbum() -> Single<[Album]> {
         return Single<[Album]>.create { single in
             AF.request("https://itunes.apple.com/search?term=jack+johnson&entity=album")

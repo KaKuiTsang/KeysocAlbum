@@ -15,6 +15,7 @@ class AlbumCell: UICollectionViewCell {
     private let albumNameLabel = UILabel()
     private let releaseYearLabel = UILabel()
     private let explicitImageView = UIImageView(image: UIImage(systemName: "e.square.fill"))
+    private let bookmarkIndicator = UIImageView(image: UIImage(systemName: "bookmark.fill"))
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,11 +35,15 @@ class AlbumCell: UICollectionViewCell {
         explicitImageView.tintColor = UIColor.gray
         explicitImageView.isHidden = true
         
+        bookmarkIndicator.tintColor = UIColor.systemRed
+        bookmarkIndicator.isHidden = true
+        
         contentView.addSubview(container)
         container.addSubview(albumCoverImageView)
         container.addSubview(albumNameLabel)
         container.addSubview(releaseYearLabel)
         container.addSubview(explicitImageView)
+        container.addSubview(bookmarkIndicator)
         
         container.snp.makeConstraints {
             $0.top.leading.trailing.bottom.equalToSuperview().priority(.high)
@@ -66,6 +71,12 @@ class AlbumCell: UICollectionViewCell {
             $0.trailing.lessThanOrEqualToSuperview().offset(0)
             $0.centerY.equalTo(albumNameLabel.snp.centerY)
         }
+        
+        bookmarkIndicator.snp.makeConstraints {
+            $0.width.height.equalTo(24)
+            $0.top.equalTo(albumCoverImageView.snp.top).offset(-2)
+            $0.trailing.equalTo(albumCoverImageView.snp.trailing).inset(6)
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -81,5 +92,6 @@ class AlbumCell: UICollectionViewCell {
         releaseYearLabel.text = dateFormatter.string(from: album.releaseDate)
         
         explicitImageView.isHidden = !album.isExplicit
+        bookmarkIndicator.isHidden = !album.isBookmarked
     }
 }

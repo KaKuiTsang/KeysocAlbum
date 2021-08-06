@@ -7,12 +7,13 @@
 
 import UIKit
 
-class MainViewController: UITabBarController {
+final class MainViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let albumVC = AlbumViewController()
+        let viewModel = AlbumViewModel(albumRepo: AlbumRepository())
+        let albumVC = AlbumViewController(viewModel: viewModel)
         let albumController = UINavigationController(rootViewController: albumVC)
         albumController.tabBarItem.title = "Album"
         albumController.tabBarItem.image = UIImage(systemName: "tv.music.note")
