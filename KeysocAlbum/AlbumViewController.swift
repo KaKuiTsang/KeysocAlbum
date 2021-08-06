@@ -7,31 +7,27 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class AlbumViewController: UIViewController {
     typealias DataSource = UICollectionViewDiffableDataSource<Section, Album>
+    
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Album>
     
     enum Section {
         case main
     }
     
-    private var collectionView: UICollectionView!
+    private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: createCollectionViewLayout())
     private lazy var dataSource = createDataSource()
     private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        collectionView = UICollectionView(frame: .zero, collectionViewLayout: createCollectionViewLayout())
-        collectionView.dataSource = dataSource
-        collectionView.backgroundColor = .white
-
-        
-        view.addSubview(collectionView)
-        collectionView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
+        view.backgroundColor = .black
+        configureNavigationBar()
+        configureCollectionView()
+        layoutSubviews()
         
         AlbumRepository.shared.fetchAlbum()
             .subscribe { [weak self] result in
@@ -43,6 +39,33 @@ class AlbumViewController: UIViewController {
                 }
             }
             .disposed(by: disposeBag)
+        
+        collectionView.rx
+            .itemSelected
+            .subscribe(onNext: { [weak self] indexPath in
+                print("\(indexPath.item)")
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    private func configureNavigationBar() {
+        title = "Album"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.barStyle = UIBarStyle.black
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+    }
+    
+    private func layoutSubviews() {
+        view.addSubview(collectionView)
+        collectionView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+    }
+    
+    private func configureCollectionView() {
+        collectionView.dataSource = dataSource
+        collectionView.backgroundColor = .black
     }
     
     private func createDataSource() -> DataSource {
@@ -66,10 +89,10 @@ class AlbumViewController: UIViewController {
         let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(100))
         let item = NSCollectionLayoutItem(layoutSize: size)
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitem: item, count: 2)
-        group.interItemSpacing = NSCollectionLayoutSpacing.fixed(10)
+        group.interItemSpacing = NSCollectionLayoutSpacing.fixed(16)
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
-        section.interGroupSpacing = 12
+        section.contentInsets = NSDirectionalEdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12)
+        section.interGroupSpacing = 16
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
     }

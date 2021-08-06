@@ -22,14 +22,12 @@ class AlbumCell: UICollectionViewCell {
         albumCoverImageView.layer.cornerRadius = 4
         albumCoverImageView.layer.masksToBounds = true
         
-        albumNameLabel.text = "Hello World"
         albumNameLabel.numberOfLines = 1
         albumNameLabel.lineBreakMode = .byTruncatingTail
-        albumNameLabel.textColor = UIColor.darkText
+        albumNameLabel.textColor = UIColor.white
         albumNameLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         
-        releaseYearLabel.text = "1999"
-        releaseYearLabel.textColor = UIColor.darkText
+        releaseYearLabel.textColor = UIColor.gray
         releaseYearLabel.font = UIFont.systemFont(ofSize: 18)
         
         contentView.addSubview(container)
