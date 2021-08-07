@@ -22,6 +22,10 @@
 		A87427A926BD125E00D06F4D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87427A826BD125E00D06F4D /* MainViewController.swift */; };
 		A87427AB26BD12A200D06F4D /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87427AA26BD12A200D06F4D /* BookmarkViewController.swift */; };
 		A87427AD26BD20C800D06F4D /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87427AC26BD20C800D06F4D /* AlbumViewModel.swift */; };
+		A87427AF26BD62D300D06F4D /* ObjectSavable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87427AE26BD62D300D06F4D /* ObjectSavable.swift */; };
+		A87427B126BD6BE000D06F4D /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87427B026BD6BE000D06F4D /* UserDefaults+Extensions.swift */; };
+		A87427B326BD6C2000D06F4D /* StoragePropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87427B226BD6C2000D06F4D /* StoragePropertyWrapper.swift */; };
+		A87427B726BEA4A200D06F4D /* BookmarkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87427B626BEA4A200D06F4D /* BookmarkRepository.swift */; };
 		EF636DC3764D6E2EBC9E0DD2 /* Pods_KeysocAlbum_KeysocAlbumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53616E240D5ACA8D24EC713A /* Pods_KeysocAlbum_KeysocAlbumUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +72,10 @@
 		A87427A826BD125E00D06F4D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A87427AA26BD12A200D06F4D /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
 		A87427AC26BD20C800D06F4D /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
+		A87427AE26BD62D300D06F4D /* ObjectSavable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectSavable.swift; sourceTree = "<group>"; };
+		A87427B026BD6BE000D06F4D /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
+		A87427B226BD6C2000D06F4D /* StoragePropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoragePropertyWrapper.swift; sourceTree = "<group>"; };
+		A87427B626BEA4A200D06F4D /* BookmarkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkRepository.swift; sourceTree = "<group>"; };
 		B083DD0C01F0902DC1969C5F /* Pods_KeysocAlbumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeysocAlbumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F521094AF5E30716240BC1CA /* Pods-KeysocAlbum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeysocAlbum.release.xcconfig"; path = "Target Support Files/Pods-KeysocAlbum/Pods-KeysocAlbum.release.xcconfig"; sourceTree = "<group>"; };
 		FB94FC29AE53C880D8628977 /* Pods-KeysocAlbum-KeysocAlbumUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeysocAlbum-KeysocAlbumUITests.debug.xcconfig"; path = "Target Support Files/Pods-KeysocAlbum-KeysocAlbumUITests/Pods-KeysocAlbum-KeysocAlbumUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,7 +152,11 @@
 				A87427A626BACED700D06F4D /* AlbumCell.swift */,
 				A87427A226B96E3900D06F4D /* Album.swift */,
 				A87427A426B9717500D06F4D /* AlbumRepository.swift */,
+				A87427B626BEA4A200D06F4D /* BookmarkRepository.swift */,
 				A87427AA26BD12A200D06F4D /* BookmarkViewController.swift */,
+				A87427AE26BD62D300D06F4D /* ObjectSavable.swift */,
+				A87427B026BD6BE000D06F4D /* UserDefaults+Extensions.swift */,
+				A87427B226BD6C2000D06F4D /* StoragePropertyWrapper.swift */,
 				A807CAEB26B95BB700A9B779 /* Assets.xcassets */,
 				A807CAED26B95BB700A9B779 /* LaunchScreen.storyboard */,
 				A807CAF026B95BB700A9B779 /* Info.plist */,
@@ -421,14 +433,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A87427AD26BD20C800D06F4D /* AlbumViewModel.swift in Sources */,
+				A87427AF26BD62D300D06F4D /* ObjectSavable.swift in Sources */,
+				A87427B326BD6C2000D06F4D /* StoragePropertyWrapper.swift in Sources */,
 				A87427A926BD125E00D06F4D /* MainViewController.swift in Sources */,
 				A807CAE726B95BB600A9B779 /* AlbumViewController.swift in Sources */,
 				A807CAE326B95BB600A9B779 /* AppDelegate.swift in Sources */,
 				A807CAE526B95BB600A9B779 /* SceneDelegate.swift in Sources */,
 				A87427AB26BD12A200D06F4D /* BookmarkViewController.swift in Sources */,
 				A87427A526B9717500D06F4D /* AlbumRepository.swift in Sources */,
+				A87427B126BD6BE000D06F4D /* UserDefaults+Extensions.swift in Sources */,
 				A87427A326B96E3900D06F4D /* Album.swift in Sources */,
 				A87427A726BACED700D06F4D /* AlbumCell.swift in Sources */,
+				A87427B726BEA4A200D06F4D /* BookmarkRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
