@@ -11,7 +11,6 @@ import RxCocoa
 
 final class AlbumViewController: UIViewController {
     typealias DataSource = UICollectionViewDiffableDataSource<Section, Album>
-    
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Album>
     
     enum Section {

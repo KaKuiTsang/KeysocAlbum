@@ -8,6 +8,7 @@
 import Foundation
 import RxSwift
 import RxRelay
+import SwiftUI
 
 enum AlbumInput {
     case didTap(Int)
@@ -21,6 +22,8 @@ final class AlbumViewModel {
     
     private let albumRepo: AlbumRepository
     
+    private let bookmarkRepo: BookmarkRepository
+    
     private let disposeBag = DisposeBag()
     
     private let albums = BehaviorRelay<[Album]>(value: [])
@@ -33,20 +36,20 @@ final class AlbumViewModel {
     
     let output = PublishRelay<AlbumOutput>()
     
-    init(albumRepo: AlbumRepository) {
+    init(albumRepo: AlbumRepository, bookmarkRepo: BookmarkRepository) {
         self.albumRepo = albumRepo
+        self.bookmarkRepo = bookmarkRepo
         
         albumRepo
             .fetchAlbum()
             .subscribe(on: ConcurrentDispatchQueueScheduler(qos: .userInitiated))
-            .subscribe { [unowned self] result in
-                switch result {
-                case var .success(albums):
-                    albums.sort { $0.releaseDate > $1.releaseDate }
-                    self.albums.accept(albums)
-                case let .failure(error):
-                    print("error \(error)")
-                }
+            .asObservable()
+            .withLatestFrom(bookmarkRepo.bookmarks) { ($0, $1) }
+            .subscribe { [unowned self] (albums, bookmarks) in
+                var albums = albums
+                albums.sort { $0.releaseDate > $1.releaseDate }
+                albums.forEach { $0.isBookmarked = bookmarks.contains($0) }
+                self.albums.accept(albums)
             }
             .disposed(by: disposeBag)
         
@@ -58,6 +61,12 @@ final class AlbumViewModel {
                     let album = albums[index]
                     album.isBookmarked.toggle()
                     self.output.accept(.reloadItems([album]))
+                    
+                    if album.isBookmarked {
+                        self.bookmarkRepo.addBookmarks(album)
+                    } else {
+                        self.bookmarkRepo.removeBookmark(album)
+                    }
                 }
             })
             .disposed(by: disposeBag)

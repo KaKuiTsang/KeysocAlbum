@@ -13,7 +13,7 @@ struct AlbumResponse: Decodable {
     let resultCount: Int
     let results: [Album]
     
-    final class Album: Decodable, Hashable {
+    final class Album: Codable, Hashable {
         let collectionId: Int
         let collectionName: String
         let albumCoverImageUrl: String

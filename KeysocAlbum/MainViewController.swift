@@ -12,7 +12,7 @@ final class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let viewModel = AlbumViewModel(albumRepo: AlbumRepository())
+        let viewModel = AlbumViewModel(albumRepo: AlbumRepository(), bookmarkRepo: BookmarkRepository.shared)
         let albumVC = AlbumViewController(viewModel: viewModel)
         let albumController = UINavigationController(rootViewController: albumVC)
         albumController.tabBarItem.title = "Album"
