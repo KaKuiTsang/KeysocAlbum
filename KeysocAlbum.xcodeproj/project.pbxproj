@@ -146,17 +146,12 @@
 			children = (
 				A807CAE226B95BB600A9B779 /* AppDelegate.swift */,
 				A807CAE426B95BB600A9B779 /* SceneDelegate.swift */,
-				A87427A826BD125E00D06F4D /* MainViewController.swift */,
-				A807CAE626B95BB600A9B779 /* AlbumViewController.swift */,
-				A87427AC26BD20C800D06F4D /* AlbumViewModel.swift */,
-				A87427A626BACED700D06F4D /* AlbumCell.swift */,
-				A87427A226B96E3900D06F4D /* Album.swift */,
-				A87427A426B9717500D06F4D /* AlbumRepository.swift */,
-				A87427B626BEA4A200D06F4D /* BookmarkRepository.swift */,
-				A87427AA26BD12A200D06F4D /* BookmarkViewController.swift */,
-				A87427AE26BD62D300D06F4D /* ObjectSavable.swift */,
-				A87427B026BD6BE000D06F4D /* UserDefaults+Extensions.swift */,
-				A87427B226BD6C2000D06F4D /* StoragePropertyWrapper.swift */,
+				A87427BC26BEBE5D00D06F4D /* Views */,
+				A87427BB26BEBE4800D06F4D /* Models */,
+				A87427BA26BEBE2C00D06F4D /* Repository */,
+				A87427BD26BEBE8B00D06F4D /* Extensions */,
+				A87427BE26BEBE9300D06F4D /* Protocols */,
+				A87427BF26BEBEC400D06F4D /* PropertyWrappers */,
 				A807CAEB26B95BB700A9B779 /* Assets.xcassets */,
 				A807CAED26B95BB700A9B779 /* LaunchScreen.storyboard */,
 				A807CAF026B95BB700A9B779 /* Info.plist */,
@@ -180,6 +175,75 @@
 				A807CB0626B95BB700A9B779 /* Info.plist */,
 			);
 			path = KeysocAlbumUITests;
+			sourceTree = "<group>";
+		};
+		A87427B826BEBE0A00D06F4D /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				A807CAE626B95BB600A9B779 /* AlbumViewController.swift */,
+				A87427AC26BD20C800D06F4D /* AlbumViewModel.swift */,
+				A87427A626BACED700D06F4D /* AlbumCell.swift */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		A87427B926BEBE2100D06F4D /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+				A87427AA26BD12A200D06F4D /* BookmarkViewController.swift */,
+			);
+			path = Bookmark;
+			sourceTree = "<group>";
+		};
+		A87427BA26BEBE2C00D06F4D /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A87427A426B9717500D06F4D /* AlbumRepository.swift */,
+				A87427B626BEA4A200D06F4D /* BookmarkRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		A87427BB26BEBE4800D06F4D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A87427A226B96E3900D06F4D /* Album.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A87427BC26BEBE5D00D06F4D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A87427A826BD125E00D06F4D /* MainViewController.swift */,
+				A87427B826BEBE0A00D06F4D /* Album */,
+				A87427B926BEBE2100D06F4D /* Bookmark */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A87427BD26BEBE8B00D06F4D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A87427B026BD6BE000D06F4D /* UserDefaults+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A87427BE26BEBE9300D06F4D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A87427AE26BD62D300D06F4D /* ObjectSavable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A87427BF26BEBEC400D06F4D /* PropertyWrappers */ = {
+			isa = PBXGroup;
+			children = (
+				A87427B226BD6C2000D06F4D /* StoragePropertyWrapper.swift */,
+			);
+			path = PropertyWrappers;
 			sourceTree = "<group>";
 		};
 		B0F457C5A61CE7BEC59EDFC4 /* Pods */ = {
