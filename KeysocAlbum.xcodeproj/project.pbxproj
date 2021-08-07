@@ -146,6 +146,7 @@
 			children = (
 				A807CAE226B95BB600A9B779 /* AppDelegate.swift */,
 				A807CAE426B95BB600A9B779 /* SceneDelegate.swift */,
+				A807CAED26B95BB700A9B779 /* LaunchScreen.storyboard */,
 				A87427BC26BEBE5D00D06F4D /* Views */,
 				A87427BB26BEBE4800D06F4D /* Models */,
 				A87427BA26BEBE2C00D06F4D /* Repository */,
@@ -153,7 +154,6 @@
 				A87427BE26BEBE9300D06F4D /* Protocols */,
 				A87427BF26BEBEC400D06F4D /* PropertyWrappers */,
 				A807CAEB26B95BB700A9B779 /* Assets.xcassets */,
-				A807CAED26B95BB700A9B779 /* LaunchScreen.storyboard */,
 				A807CAF026B95BB700A9B779 /* Info.plist */,
 			);
 			path = KeysocAlbum;
