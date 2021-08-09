@@ -4,7 +4,7 @@ Demo App for Keysoc
 
 ## Tech Stack
 
-- UIKit + RxSiwft + MVVM
+- UIKit + RxSwift + MVVM
 - package manager: **CocoaPods**
 - minimun deployment target: **iOS 14.5**
 
