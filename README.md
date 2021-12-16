@@ -12,5 +12,5 @@ Demo App for Keysoc
 
 - Alamofire : Network Library
 - Kingfisher : Image Caching
-- RxSwift : Reacting Programming
+- RxSwift : Reactive Programming Library
 - SnapKit : Autolayout Helper
